@@ -10,4 +10,4 @@ Sistema de reconhecimento de mérito estudantil para incentivar o estudo e parti
 * Cleiton Tavares
 
 ## Instruções de utilização
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Garanta que possua Maven instalado e configurado na máquina, execute o arquivo DemoApplication, a aplicação estará disponível pelo link http://localhost:8080/login.html
