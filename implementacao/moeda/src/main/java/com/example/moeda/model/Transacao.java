@@ -1,8 +1,6 @@
-package com.example.moeda.model.transacao;
+package com.example.moeda.model;
 
-import com.example.moeda.model.pessoa.Pessoa;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.example.moeda.model.instituicao.Instituicao;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
@@ -104,4 +102,4 @@ public class Transacao {
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
-}
+} 

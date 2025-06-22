@@ -1,6 +1,6 @@
 package com.example.moeda.repository;
 
-import com.example.moeda.model.transacao.Transacao;
+import com.example.moeda.model.Transacao;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,8 +1,6 @@
-package com.example.moeda.model.pessoa;
+package com.example.moeda.model;
 
-import com.example.moeda.model.usuario.Usuario;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.example.moeda.model.instituicao.Instituicao;
 import jakarta.persistence.*;
 
 @Entity
@@ -43,4 +41,4 @@ public class Pessoa extends Usuario {
     public void setInstituicao(Instituicao instituicao) {
         this.instituicao = instituicao;
     }
-}
+} 

@@ -1,6 +1,6 @@
 package com.example.moeda.controller;
 
-import com.example.moeda.model.instituicao.Instituicao;
+import com.example.moeda.model.Instituicao;
 import com.example.moeda.repository.InstituicaoRepository;
 import org.springframework.web.bind.annotation.*;
 

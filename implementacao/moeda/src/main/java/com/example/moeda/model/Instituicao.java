@@ -1,10 +1,7 @@
-package com.example.moeda.model.instituicao;
+package com.example.moeda.model;
 
 import java.util.List;
-
-import com.example.moeda.model.pessoa.Pessoa;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import jakarta.persistence.*;
 
 @Entity
@@ -77,4 +74,4 @@ public class Instituicao {
     public void setPessoas(List<Pessoa> pessoas) {
         this.pessoas = pessoas;
     }
-}
+} 

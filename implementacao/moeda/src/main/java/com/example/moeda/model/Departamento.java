@@ -1,11 +1,7 @@
-package com.example.moeda.model.departamento;
+package com.example.moeda.model;
 
-import com.example.moeda.model.curso.Curso;
-import com.example.moeda.model.instituicao.Instituicao;
-import com.example.moeda.model.professor.Professor;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -49,4 +45,4 @@ public class Departamento {
     public void setCursos(List<Curso> cursos) { this.cursos = cursos; }
     public List<Professor> getProfessores() { return professores; }
     public void setProfessores(List<Professor> professores) { this.professores = professores; }
-}
+} 

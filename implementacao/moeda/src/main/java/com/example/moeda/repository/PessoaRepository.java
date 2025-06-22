@@ -1,6 +1,6 @@
 package com.example.moeda.repository;
 
-import com.example.moeda.model.pessoa.Pessoa;
+import com.example.moeda.model.Pessoa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

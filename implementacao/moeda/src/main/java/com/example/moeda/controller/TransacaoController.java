@@ -3,11 +3,11 @@ package com.example.moeda.controller;
 import com.example.moeda.dto.DepositoSemestralDTO;
 import com.example.moeda.dto.ResgateVantagemDTO;
 import com.example.moeda.dto.TransacaoDTO;
-import com.example.moeda.model.aluno.Aluno;
-import com.example.moeda.model.instituicao.Instituicao;
-import com.example.moeda.model.pessoa.Pessoa;
-import com.example.moeda.model.transacao.Transacao;
-import com.example.moeda.model.vantagem.Vantagem;
+import com.example.moeda.model.Aluno;
+import com.example.moeda.model.Instituicao;
+import com.example.moeda.model.Pessoa;
+import com.example.moeda.model.Transacao;
+import com.example.moeda.model.Vantagem;
 import com.example.moeda.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,23 +27,26 @@ import java.util.Optional;
 @RequestMapping("/api/transacoes")
 public class TransacaoController {
 
-    @Autowired
-    private TransacaoRepository transacaoRepository;
+    private final TransacaoRepository transacaoRepository;
+    private final PessoaRepository pessoaRepository;
+    private final InstituicaoRepository instituicaoRepository;
+    private final AlunoRepository alunoRepository;
+    private final VantagemRepository vantagemRepository;
+    private final JavaMailSender mailSender;
 
-    @Autowired
-    private PessoaRepository pessoaRepository;
-
-    @Autowired
-    private InstituicaoRepository instituicaoRepository;
-
-    @Autowired
-    private AlunoRepository alunoRepository;
-
-    @Autowired
-    private VantagemRepository vantagemRepository;
-
-    @Autowired
-    private JavaMailSender mailSender;
+    public TransacaoController(TransacaoRepository transacaoRepository,
+                              PessoaRepository pessoaRepository,
+                              InstituicaoRepository instituicaoRepository,
+                              AlunoRepository alunoRepository,
+                              VantagemRepository vantagemRepository,
+                              JavaMailSender mailSender) {
+        this.transacaoRepository = transacaoRepository;
+        this.pessoaRepository = pessoaRepository;
+        this.instituicaoRepository = instituicaoRepository;
+        this.alunoRepository = alunoRepository;
+        this.vantagemRepository = vantagemRepository;
+        this.mailSender = mailSender;
+    }
 
     @PostMapping
     public ResponseEntity<Transacao> criarTransacao(@RequestBody TransacaoDTO transacaoDTO) {

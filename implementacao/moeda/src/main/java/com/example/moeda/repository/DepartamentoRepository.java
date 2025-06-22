@@ -1,6 +1,6 @@
 package com.example.moeda.repository;
 
-import com.example.moeda.model.departamento.Departamento;
+import com.example.moeda.model.Departamento;
 
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
