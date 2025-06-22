@@ -1,4 +1,4 @@
-package com.example.moeda.model.usuario;
+package com.example.moeda.model;
 
 import jakarta.persistence.*;
 
@@ -49,4 +49,4 @@ public abstract class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-}
+} 

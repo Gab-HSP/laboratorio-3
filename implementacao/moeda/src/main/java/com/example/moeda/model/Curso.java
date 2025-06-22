@@ -1,8 +1,6 @@
-package com.example.moeda.model.curso;
+package com.example.moeda.model;
 
-import com.example.moeda.model.departamento.Departamento;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import jakarta.persistence.*;
 
 @Entity
@@ -64,4 +62,4 @@ public class Curso {
     public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
     }
-}
+} 

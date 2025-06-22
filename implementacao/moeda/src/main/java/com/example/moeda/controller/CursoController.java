@@ -1,7 +1,7 @@
 package com.example.moeda.controller;
 
 import com.example.moeda.dto.CursoDTO;
-import com.example.moeda.model.departamento.Departamento;
+import com.example.moeda.model.Departamento;
 import com.example.moeda.repository.DepartamentoRepository;
 import com.example.moeda.repository.CursoRepository;
 

@@ -1,6 +1,5 @@
-package com.example.moeda.model.empresa;
+package com.example.moeda.model;
 
-import com.example.moeda.model.usuario.Usuario;
 import jakarta.persistence.*;
 
 @Entity
@@ -17,4 +16,4 @@ public class Empresa extends Usuario {
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
-}
+} 

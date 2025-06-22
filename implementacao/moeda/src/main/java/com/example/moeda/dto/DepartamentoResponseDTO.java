@@ -1,6 +1,6 @@
 package com.example.moeda.dto;
 
-import com.example.moeda.model.departamento.Departamento;
+import com.example.moeda.model.Departamento;
 
 public class DepartamentoResponseDTO {
     private Long id;

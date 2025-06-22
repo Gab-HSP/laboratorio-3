@@ -1,11 +1,11 @@
 package com.example.moeda.config;
 
-import com.example.moeda.model.curso.Curso;
-import com.example.moeda.model.departamento.Departamento;
-import com.example.moeda.model.instituicao.Instituicao;
-import com.example.moeda.model.aluno.Aluno;
-import com.example.moeda.model.professor.Professor;
-import com.example.moeda.model.empresa.Empresa;
+import com.example.moeda.model.Curso;
+import com.example.moeda.model.Departamento;
+import com.example.moeda.model.Instituicao;
+import com.example.moeda.model.Aluno;
+import com.example.moeda.model.Professor;
+import com.example.moeda.model.Empresa;
 import com.example.moeda.repository.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;

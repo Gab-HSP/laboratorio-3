@@ -1,9 +1,7 @@
-package com.example.moeda.model.vantagem;
+package com.example.moeda.model;
 
-import com.example.moeda.model.empresa.Empresa;
 import jakarta.persistence.*;
 import java.util.List;
-import com.example.moeda.model.aluno.Aluno;
 
 @Entity
 @Table(name = "vantagens")
@@ -87,4 +85,4 @@ public class Vantagem {
     public void setImagemUrl(String imagemUrl) {
         this.imagemUrl = imagemUrl;
     }
-}
+} 

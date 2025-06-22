@@ -1,13 +1,8 @@
-package com.example.moeda.model.aluno;
+package com.example.moeda.model;
 
-import com.example.moeda.model.pessoa.Pessoa;
-import com.example.moeda.model.vantagem.Vantagem;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-import java.util.List;
-
-import com.example.moeda.model.curso.Curso;
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "alunos")
@@ -59,4 +54,4 @@ public class Aluno extends Pessoa {
     public void setVantagens(List<Vantagem> vantagens) {
         this.vantagens = vantagens;
     }
-}
+} 

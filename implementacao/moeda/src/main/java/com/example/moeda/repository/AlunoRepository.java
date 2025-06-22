@@ -1,6 +1,6 @@
 package com.example.moeda.repository;
 
-import com.example.moeda.model.aluno.Aluno;
+import com.example.moeda.model.Aluno;
 
 import java.util.List;
 

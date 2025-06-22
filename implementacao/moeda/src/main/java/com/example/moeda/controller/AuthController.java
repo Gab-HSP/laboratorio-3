@@ -1,8 +1,8 @@
 package com.example.moeda.controller;
 
-import com.example.moeda.model.aluno.Aluno;
-import com.example.moeda.model.empresa.Empresa;
-import com.example.moeda.model.professor.Professor;
+import com.example.moeda.model.Aluno;
+import com.example.moeda.model.Empresa;
+import com.example.moeda.model.Professor;
 import com.example.moeda.repository.AlunoRepository;
 import com.example.moeda.repository.EmpresaRepository;
 import com.example.moeda.repository.ProfessorRepository;

@@ -1,10 +1,10 @@
 package com.example.moeda.controller;
 
 import com.example.moeda.dto.ProfessorCreateDTO;
-import com.example.moeda.model.departamento.Departamento;
-import com.example.moeda.model.instituicao.Instituicao;
-import com.example.moeda.model.professor.Professor;
-import com.example.moeda.model.transacao.Transacao;
+import com.example.moeda.model.Departamento;
+import com.example.moeda.model.Instituicao;
+import com.example.moeda.model.Professor;
+import com.example.moeda.model.Transacao;
 import com.example.moeda.repository.DepartamentoRepository;
 import com.example.moeda.repository.InstituicaoRepository;
 import com.example.moeda.repository.ProfessorRepository;

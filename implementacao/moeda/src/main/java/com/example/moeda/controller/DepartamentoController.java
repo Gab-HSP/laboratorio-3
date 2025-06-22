@@ -1,7 +1,7 @@
 package com.example.moeda.controller;
 
 import com.example.moeda.dto.DepartamentoResponseDTO;
-import com.example.moeda.model.departamento.Departamento;
+import com.example.moeda.model.Departamento;
 import com.example.moeda.repository.DepartamentoRepository;
 
 import org.springframework.http.ResponseEntity;

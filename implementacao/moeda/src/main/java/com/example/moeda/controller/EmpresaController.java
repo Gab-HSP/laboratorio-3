@@ -1,7 +1,7 @@
 package com.example.moeda.controller;
 
 import com.example.moeda.dto.EmpresaCreateDTO;
-import com.example.moeda.model.empresa.Empresa;
+import com.example.moeda.model.Empresa;
 import com.example.moeda.repository.EmpresaRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
