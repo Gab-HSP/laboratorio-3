@@ -9,6 +9,8 @@ import com.example.moeda.model.pessoa.Pessoa;
 import com.example.moeda.model.transacao.Transacao;
 import com.example.moeda.model.vantagem.Vantagem;
 import com.example.moeda.repository.*;
+import com.example.moeda.service.TransacaoService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.MailException;
@@ -45,50 +47,17 @@ public class TransacaoController {
     @Autowired
     private JavaMailSender mailSender;
 
+    @Autowired
+    private TransacaoService transacaoService;
+
+
     @PostMapping
-    public ResponseEntity<Transacao> criarTransacao(@RequestBody TransacaoDTO transacaoDTO) {
-        try {
-            // Buscar as entidades relacionadas
-            Optional<Pessoa> remetenteOpt = pessoaRepository.findById(transacaoDTO.getRemetenteId());
-            Optional<Pessoa> destinatarioOpt = pessoaRepository.findById(transacaoDTO.getDestinatarioId());
-            Optional<Instituicao> instituicaoOpt = instituicaoRepository.findById(transacaoDTO.getInstituicaoId());
-
-            if (remetenteOpt.isEmpty() || destinatarioOpt.isEmpty() || instituicaoOpt.isEmpty()) {
-                return ResponseEntity.badRequest().build();
-            }
-
-            Pessoa remetente = remetenteOpt.get();
-            Pessoa destinatario = destinatarioOpt.get();
-            Instituicao instituicao = instituicaoOpt.get();
-
-            // Verificar se o remetente tem saldo suficiente
-            if (remetente.getSaldo() < transacaoDTO.getValor()) {
-                return ResponseEntity.badRequest().build();
-            }
-
-            // Atualizar os saldos
-            remetente.setSaldo(remetente.getSaldo() - transacaoDTO.getValor());
-            destinatario.setSaldo(destinatario.getSaldo() + transacaoDTO.getValor());
-
-            pessoaRepository.save(remetente);
-            pessoaRepository.save(destinatario);
-
-            // Criar a transação
-            Transacao transacao = new Transacao();
-            transacao.setData(LocalDateTime.now());
-            transacao.setRemetente(remetente);
-            transacao.setDestinatario(destinatario);
-            transacao.setInstituicao(instituicao);
-            transacao.setValor(transacaoDTO.getValor());
-            transacao.setMensagem(transacaoDTO.getMensagem());
-
-            Transacao transacaoSalva = transacaoRepository.save(transacao);
-
-            return ResponseEntity.ok(transacaoSalva);
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().build();
-        }
+    public ResponseEntity<Transacao> criarTransacao(@RequestBody TransacaoDTO dto) {
+        return transacaoService.processarTransacao(dto)
+            .map(ResponseEntity::ok)
+            .orElse(ResponseEntity.badRequest().build());
     }
+
 
     @PostMapping("/deposito-semestral")
     public ResponseEntity<Transacao> realizarDepositoSemestral(
